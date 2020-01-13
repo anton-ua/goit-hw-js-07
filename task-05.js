@@ -1,8 +1,14 @@
 const nameInput = document.querySelector("#name-input");
 const nameOutput = document.querySelector("#name-output");
 
-const name = nameInput.addEventListener("input", changeName);
+const defName = nameOutput.innerText;
+
+nameInput.addEventListener("input", changeName);
 
 function changeName(name) {
-  nameOutput.textContent = name.target.value;
+  if (name.target.value.length > 0) {
+    nameOutput.textContent = name.target.value;
+  } else {
+    nameOutput.textContent = defName;
+  }
 }

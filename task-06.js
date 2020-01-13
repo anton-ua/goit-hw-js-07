@@ -1,5 +1,5 @@
 const validationInput = document.querySelector("#validation-input");
-const input = document.addEventListener("change", validation);
+validationInput.addEventListener("change", validation);
 
 function validation(input) {
   if (
